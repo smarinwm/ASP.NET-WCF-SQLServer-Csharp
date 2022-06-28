@@ -7,6 +7,17 @@ namespace EjemploWCF
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+        public void EliminarUsuario(string user)
+        {
+            contextoDatosDataContext contexto = new contextoDatosDataContext();
+            List<Usuario> datos = (from r in contexto.Usuarios where r.NombreUsuario.Equals(user) select r).ToList();
+            if (datos.Count > 0)
+            {
+                contexto.Usuarios.DeleteOnSubmit(datos.FirstOrDefault());
+                contexto.SubmitChanges();
+            }
+        }
+
         public void InsertarUsuario(string user, string pass)
         {
             contextoDatosDataContext contexto = new contextoDatosDataContext();
