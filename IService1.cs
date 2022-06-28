@@ -20,6 +20,9 @@ namespace EjemploWCF
         [OperationContract]
         void EliminarUsuario(string user);
 
+        [OperationContract]
+        bool DesactivarUsuario(string user);
+
 
     }
 
