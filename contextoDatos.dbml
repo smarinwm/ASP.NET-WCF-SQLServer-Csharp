@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EJEMPLO_BD" Class="contextoDatosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=WINDEV2204EVAL\SQLEXPRESS;Initial Catalog=EJEMPLO_BD;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="EJEMPLO_BDConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Usuarios" Member="Usuarios">
+    <Type Name="Usuario">
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NombreUsuario" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Pass" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Activo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
