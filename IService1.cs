@@ -14,6 +14,10 @@ namespace EjemploWCF
         [OperationContract]
         bool VerificarAcceso(string user, string pass);
 
+        [OperationContract]
+        void InsertarUsuario(string user, string pass);
+
+
     }
 
 
